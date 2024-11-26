@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Empowerment through Tourism System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Women Empowerment through Tourism</h1>
+    </header>
+
+    <section id="welcomeSection">
+        <h2>Welcome to WETS</h2>
+        <p>Empowering women through tourism opportunities.</p>
+    </section>
+
+    <div class="container">
+        <div id="mainOptions">
+            <button onclick="showRegisterForm()">New Registration</button><br>
+            <button onclick="showLoginForm()">Login</button>
+        </div>
+
+        <div id="registerForm" class="form" style="display: none;">
+            <h3>Register</h3>
+            <label>Name:</label>
+            <input type="text" id="regName" placeholder="Enter Name">
+            <label>Email:</label>
+            <input type="email" id="regEmail" placeholder="Enter Email">
+            <label>Password:</label>
+            <input type="password" id="regPassword" placeholder="Enter Password">
+            <select id="regRole">
+                <option value="trainee">Women Trainee</option>
+                <option value="trainer">Trainer</option>
+                <option value="employer">Employer</option>
+                <option value="Administrator">Admin</option>
+            </select>
+            <button onclick="registerUser()">Register</button>
+            <button onclick="showMainOptions()">Back</button>
+        </div>
+
+        <div id="loginForm" class="form" style="display: none;">
+            <h3>Login</h3>
+            <label>Email:</label>
+            <input type="email" id="loginEmail" placeholder="Enter Email">
+            <label>Password:</label>
+            <input type="password" id="loginPassword" placeholder="Enter Password">
+            <button onclick="loginUser()">Login</button>
+            <button onclick="showMainOptions()">Back</button>
+        </div>
+
+        <div id="dashboard" style="display: none;">
+            <h2>User Dashboard</h2>
+            <div id="dashboardContent"></div>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
